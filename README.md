@@ -1,2 +1,6 @@
 # SpectraLab
 SpectraLab data analysis and acquisition software for biochemical spectroscopy and enzyme kinetics
+
+SpectraLab (SpLab) is a universal tool for advanced data analysis in (bio)chemical spectroscopy and kinetics. The core of SpectraLab was written in 1988-1991 for an Apple-II computer running under CP/M DOS. The MS-DOS version of SpectraLab that incorporates spectral deconvolution and principal component analysis functions was designed in 1992-1993. Its general design and basic algorithms are described in (Davydov et al, 1995: https://pubmed.ncbi.nlm.nih.gov/7625841/). Please, refer to the above publication if you use the package in your work. Since then,  SpectraLab has been transferred to the Windows platform and went through several major improvements and substantial re-design.  However, the algorithmic base and the general architecture of the package remained basically the same.
+ 
+The current version of the package is written with the use of Win32Forth (http://win32forth.sourceforge.net/) and Delphi® (vers. 7). It runs under Windows XP and higher. The package includes most of the mathematical tools needed in the routine work in biochemical spectroscopy and enzyme kinetics. More information is available at: http://cyp3a4.chem.wsu.edu/spectralab.html
