@@ -73,4 +73,10 @@ modules/
 *.spc
 *.asc
 *.ini
+*.htm
+*.html
+*.gif
+*.ico
+*.pdf
+*.txt
 
