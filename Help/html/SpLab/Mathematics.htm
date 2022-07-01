@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252"
+      http-equiv="Content-Type">
+    <title>Mathematics1</title>
+  </head>
+  <body>
+    <div style="text-align: center;">
+      <div align="center">
+        <blockquote>
+          <div><br>
+            <hr>
+            <h1><font color="#3333ff" face="Comic Sans MS">Mathematical
+                Tools in SpectraLab&nbsp; <br>
+              </font></h1>
+            <hr><font color="#3333ff" size="+2"><span
+                style="font-weight: bold; font-family: Comic Sans MS;"></span></font><br>
+            <font size="+2"><span style="font-weight: bold; font-family:
+                Comic Sans MS;"> </span></font></div>
+        </blockquote>
+      </div>
+      <blockquote>
+        <div align="left"><font size="+1" face="Calibri">SpectraLab</font><font
+            size="+1" face="Calibri"><span
+              style="font-family:&quot;Comic Sans
+              MS&quot;;mso-ansi-language: EN-US"> contains various tools
+              for pre-processing and analyzing spectral and kinetic
+              data. Most of these tools are available through the "Math"
+              and "Analysis" sections of the Main Menu. <br>
+              <u><b>The "Math" section</b></u> includes&nbsp; simple
+              mathematical operations on the traces (summarizing,
+              multiplying, etc.). Some of these operations, such as </span></font><font
+            size="+1" face="Calibri"><span
+              style="font-family:&quot;Comic Sans
+              MS&quot;;mso-ansi-language: EN-US"><span
+                style="font-family:&quot;Comic Sans
+                MS&quot;;mso-ansi-language: EN-US">taking the logarithm,
+                exponentiation, and some other mathematical functions,
+                are not available in the Menu but may be invoked through
+                the Command Line (see their descriptions in the <a
+                  moz-do-not-send="true" href="Splab-Scripts.htm">Glossary
+
+                  of SpectraLab Scripts</a>). </span>Additional, more
+              advanced pre-processing tools available through Main Menu
+              and/or through the Command Line are:<br>
+            </span></font><font size="+1" face="Calibri"> </font><font
+            size="+1"> </font>
+          <ul>
+            <li><font size="+1" face="Calibri"><b>Re-sampling</b> the
+                traces to the desired sub-range and regular interval at
+                X-axis. If necessary, this re-sampling involves
+                third-order polynomial interpolation between the points
+                using the <a moz-do-not-send="true"
+                  href="http://www.notespoint.com/aitken-interpolation/">Aitken
+
+
+
+
+                  algorithm</a>&nbsp; as implemented by <a
+                  moz-do-not-send="true"
+                  href="https://dl.acm.org/doi/10.1145/366813.366834">Mifsud</a>.</font></li>
+            <li><font size="+1" face="Calibri">Moving-window third-order
+                <a moz-do-not-send="true"
+                  href="http://www.statistics4u.info/fundstat_eng/cc_filter_savgolay.html"><b>polynomial
+
+
+
+
+                    smoothing</b> using Savitzky–Golay algorithm</a>
+                (requires regular distribution of the points by X-axis).
+                The window may vary from 3 to 21 points (in the case of
+                a three-point window, the second-order polynomial is
+                applied).<br>
+              </font></li>
+            <li><font size="+1" face="Calibri">Filtering-out outliers
+                with <a moz-do-not-send="true"
+                  href="https://dx.doi.org/10.17485/ijst/2016/v9i28/97354"><b>"Triad"
+
+
+
+
+                    smoothing</b> using Tukey's moving median algorithm</a>
+                . The window may be varied from 3 to 7 points. <br>
+              </font></li>
+            <li><font size="+1" face="Calibri">Calculation of the <b>first
+
+
+
+
+                  and second order derivatives</b> using <a
+                  moz-do-not-send="true"
+href="http://www.holoborodko.com/pavel/numerical-methods/numerical-derivative/central-differences/">the
+
+
+
+
+                  five-point central differences algorithm</a>. These
+                calculations require regular distribution of points. In
+                the case of noisy data, it is advisable to use
+                Savitsky-Golay smoothing before differentiation. In
+                contrast to the previous three techniques available
+                through the Main Menu, differentiation can be invoked
+                only through the Command Line (see #DER1 and #DER2 words
+                in the Glossary of SpectraLab scripts). -<br>
+              </font></li>
+          </ul>
+          <font size="+1"> <font face="Calibri"> <span
+                style="font-family:&quot;Comic Sans
+                MS&quot;;mso-ansi-language: EN-US"><u><b>The "Analysis"
+                    section</b></u> provides tools for:<br>
+              </span> </font> </font>
+          <ul>
+            <li><font size="+1" face="Calibri"><span
+                  style="font-family:&quot;Comic Sans
+                  MS&quot;;mso-ansi-language: EN-US"><span
+                    style="font-family:&quot;Comic Sans
+                    MS&quot;;mso-ansi-language: EN-US">fitting spectra
+                    by combinations of spectral standards </span>using
+                  the multi-dimensional linear least-squares algorithm
+                  (SURFIT procedure)</span></font></li>
+            <li><font size="+1" face="Calibri"><span
+                  style="font-family:&quot;Comic Sans
+                  MS&quot;;mso-ansi-language: EN-US">non-linear least
+                  square approximation of traces by a pre-defined set of
+                  mathematical functions commonly used in the analysis
+                  of (bio)chemical data (CURFIT procedure), and</span></font></li>
+            <li><font size="+1" face="Calibri"><span
+                  style="font-family:&quot;Comic Sans
+                  MS&quot;;mso-ansi-language: EN-US">analysis of a
+                  series of spectra with the Principal Component
+                  Analysis (PCA) technique (SPAN procedure). </span></font></li>
+          </ul>
+          <font size="+1"> </font><font size="+2"><font size="+1"> <font
+                face="Calibri"> </font></font><font face="Comic Sans
+              MS"><span style="font-family:&quot;Comic Sans
+                MS&quot;;mso-ansi-language: EN-US"><font face="Calibri"><font
+                    size="+1">These methods are described in detail in
+                    separate pages of this Help System.<br>
+                    <br>
+                  </font><br>
+                </font></span></font></font> </div>
+      </blockquote>
+    </div>
+  </body>
+</html>

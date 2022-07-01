@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252"
+      http-equiv="Content-Type">
+    <title>Spectra correction</title>
+  </head>
+  <body>
+    <div style="text-align: center;">
+      <div align="center">
+        <blockquote>
+          <div><br>
+            <hr>
+            <h1><font color="#3333ff" face="Comic Sans MS">Spectra
+                correction utilities</font><br>
+            </h1>
+            <hr><font color="#3333ff" size="+2"><span
+                style="font-weight: bold; font-family: Comic Sans MS;"></span></font><br>
+            <font size="+2"><span style="font-weight: bold; font-family:
+                Comic Sans MS;"> </span></font></div>
+        </blockquote>
+      </div>
+      <blockquote>
+        <div align="left"><font size="+1"><font face="Calibri">Application
+              of PCA toolset for global analysis of spectral series
+              often requires preparatory treatment of spectra. In
+              particular, it is needed to compensate for changes in the
+              spectral amplitude due to dilution in titration
+              experiments or due to sample compression in pressure
+              perturbation studies. Spectral titration experiments also
+              often need suppression of increasing absorbance of titrant
+              and fluctuations in the turbidity of the sample. For these
+              purposes, SpectraLab&nbsp; includes several spectra
+              correction utilities, which may be found in the "Spectra
+              Correction" section of the Main Menu.</font></font><font
+            size="+1"><font face="Calibri"><br>
+            </font></font>
+          <p><font face="Comic Sans MS"><strong><em><font size="+1">TitCor
+                    (Correction on dilution)</font></em></strong></font><font
+              size="+1"><font face="Calibri"><br>
+                This utility is designed for the correction of spectral
+                series on sample dilution in titration experiments. To
+                do so, it multiples each spectrum by the ratio of the
+                sample volume at the moment of scanning to the initial
+                volume of the sample (before titrant additions). It also
+                calculates the titrant concentrations and places them
+                into the Z-column of the SpectraLab spreadsheet. To
+                apply this procedure, the user should place a series of
+                spectra into consecutive locations starting at location
+                one of the SpectraLab spreadsheet. The Z-column should
+                contain the total volume of the titrant solution added
+                for each spectrum of the series. The line-cursor should
+                be placed at the first spectrum of the series (i.e., it
+                should be at location one). After selecting "TitCor
+                (Correction on dilution)" in "Spectra Correction"
+                section of the menu, users will be asked for the total
+                number of spectra to correct (they only need to confirm
+                the </font></font><font size="+1"><font face="Calibri"><font
+                  size="+1"><font face="Calibri">number </font></font></font></font><font
+              size="+1"><font face="Calibri"><font size="+1"><font
+                    face="Calibri"><font size="+1"><font face="Calibri">determined
+                      </font></font></font></font>automatically), the
+                total volume of the sample (700 µl by default) and the
+                concentration of the titrant stock solution (20,000 µM
+                by default). The use of multiple stocks in one titration
+                experiment is not supported.</font></font><br>
+          </p>
+          <p><font face="Comic Sans MS"><strong><font size="+1">Pressure
+                  correction</font></strong></font><br>
+            <font size="+1" face="Calibri">This utility is designed to
+              correct a series of spectra taken in a
+              pressure-perturbation experiment for pressure-dependent
+              compression of the sample. This correction is based on the
+              table of water compressibility published in <a
+                moz-do-not-send="true"
+href="https://www.worldcat.org/title/physics-of-high-pressure/oclc/8122603">"The
+                Physics of High Pressure" book by P. W. Bridgman</a>. </font><br>
+          </p>
+          <p><font face="Comic Sans MS"><strong><font size="+1">Sub
+                  (Recursive subtraction of correction traces)<br>
+                </font></strong><font size="+1" face="Calibri">This is a
+                macro-command for recursive subtraction of a spectrum
+                from a series of spectra starting at location one of the
+                SpectraLab spreadsheet. To do so</font></font><font
+              face="Comic Sans MS"><font size="+1" face="Calibri"><font
+                  face="Comic Sans MS"><font size="+1" face="Calibri">,
+                    users should place the line-cursor at one of the
+                    spectra of the series (not necessarily the first
+                    one) and select </font></font></font></font><font
+              face="Comic Sans MS"><font size="+1" face="Calibri"><font
+                  face="Comic Sans MS"><font size="+1" face="Calibri"><font
+                      face="Comic Sans MS"><font size="+1"
+                        face="Calibri">the "Sub..." option in the
+                        "Spectra Correction" section of the Main Menu</font></font></font></font><font
+                  face="Comic Sans MS"><font size="+1" face="Calibri">.
+                    They will be now asked </font></font></font></font><font
+              face="Comic Sans MS"><font size="+1" face="Calibri">for
+                the number of spectra to correct and the location of the
+                correction trace.<br>
+                Optionally, the correction trace may be accompanied by a
+                set of multiplier coefficients to scale it for each
+                spectrum in the series. This scaling option is designed
+                for correcting spectral series on background
+                fluctuations based on the results of PCA
+                procedure.&nbsp; To use it, users should place
+                line-cursor on one of the&nbsp; "Principal vector.."
+                traces in SpectraLab spreadsheet and fit it with a
+                combination of spectral standards and a polynomial using
+                SURFIT module. Now, the polynomial part may be scaled
+                proportionally to the respective eigenvalues and
+                subtracted from both the spectral series and the focused
+                Principal vector by clicking on the "Sub.." option in
+                the "Spectra Correction" section of the Main Menu. The
+                users will be now asked for the number of spectra to
+                correct (default value is determined automatically), the
+                address of the location with the vector of eigenvalues
+                (default value is determined automatically), and the
+                location of the correction trace. </font></font><br>
+          </p>
+          <font face="Comic Sans MS"><strong><font size="+1">PolyCor
+                (Background suppression)<br>
+              </font></strong><font size="+1"><font face="Calibri">This
+                utility allows for automatic correction of a series of
+                spectra based on the results of Principal Component
+                Analysis. This correction includes both the suppression
+                of absorbance of titrant and correction for the changing
+                turbidity of the sample. To apply this procedure, the
+                user should provide a file with the spectral standards
+                of the compounds of interest (termed "Dynamic
+                Standards") and a file with the spectral standard(s) of
+                the compound (usualy a titrant) whose absorbance should
+                be suppressed from the spectra ("Background Standards").
+                Optionally, the user can also provide the file termed
+                "Static Standards", where the "Dynamic Standards" are
+                complemented with a prototypical spectrum of a
+                chromophore, which, although present in the system, is
+                not affected by the process under study. Example where
+                "Static Standards" may be needed is a titration of human
+                liver microsomes by P450 substrates. Due to the presence
+                of cytochrome <i>b</i><sub>5</sub>, its spectrum (along
+                with the spectral standards of cytochrome P450) should
+                be taken into account for adequate approximation of the
+                absorbance spectra of microsomes. However, the
+                absorbance of cytochrome <i>b</i><sub>5</sub> is not
+                affected by P450 substrates and thus represents a
+                "static contribution" to the spectra. <br>
+                The use of the PolyCor utility is illustrated below by
+                its application to a series of spectra obtained in a
+                titration of purified cytochrome P450 3A4 (CYP3A4) by
+                1-pyrenebutanol, a type-I CYP3A4 substrate that
+                possesses absorbance bands (at 328, 342 and 374 nm) that
+                overlap with P450 absorbance in the Soret region and
+                complicate the analysis. This dataset may be found in
+                CYP3A4@1PB.SPC file in the "Examples" subfolder of the
+                package.&nbsp; A screenshot below shows the series of
+                spectra under analysis and the results of the first run
+                of the SPAN procedure. Insert in the Chart window shows
+                the first three principal vectors (blue, dark yellow,
+                and magenta for the components 1,2, and 3,
+                respectively). <br>
+              </font></font></font>
+          <div align="center"><img moz-do-not-send="true"
+              src="../../Res/PolyCor1.gif" alt="" width="880"
+              height="521"><br>
+          </div>
+          <font face="Comic Sans MS"><font size="+1"><font
+                face="Calibri">As seen from the plot, spectral changes
+                upon addition of 1-PB reflect three principal
+                contributions: (1) type-I spectral changes in CYP3A4 due
+                to substrate binding (decrease in absorbance at 418 nm
+                and appearance of the band centered at 396 nm); (2)
+                appearance of the spectral bands of 1-PB at 342 and 374
+                nm; (3) increase in turbidity (light scattering) at high
+                concentrations of 1-PB, which is poorly soluble in
+                water. The PolyCor procedure may be applied to suppress
+                the changes of the latter two types from the spectra. To
+                do so, the user should place the line-cursor at
+                Principal vector #1 and select thr "PolyCor" option in
+                the "Spectra correction"&nbsp; section of the Main Menu.
+                The following form will appear:&nbsp; <br>
+              </font></font></font>
+          <div align="center"><img moz-do-not-send="true"
+              src="../../Res/PolyCor_form.gif" alt="" width="362"
+              height="247"><br>
+          </div>
+          <font face="Comic Sans MS"><font size="+1"><font
+                face="Calibri">The "Order of polynomial" and "Number of
+                principal components" fields stay for the chosen order
+                of polynomial for baseline correction and the total
+                number of Principal Components (starting from the first)
+                to be used in correction. In the form shown above, we
+                selected the second-order polynomial and four principal
+                components to be considered. The roles of the "Dynamic",
+                "Background" and "Static" spectral standards in the
+                correction process were discussed above. In our case, we
+                selected the CYP3A4.ASC standards as a "Dynamic Target
+                Standards" file and the file PIRBUTAB.ASC as a
+                "Background Standards" file. The latter file contains
+                two spectra of 1-PB absorbance taken in different
+                solvents (water and ethanol) and a differential spectra
+                that depicts the changes in 1-PB absorbance bands at
+                increased concentrations in water. Taken together, these
+                three spectra allow approximating the spectra of 1-PB
+                absorbance both in water and in protein-associated
+                states with high accuracy. Both files used in this
+                example can be found in the "Standards" subfolder of the
+                SpectraLab package. Correction can be started by
+                clicking on the "Run" button. The following screenshot
+                shows the SpectraLab screen after performing the
+                procedure:<br>
+              </font></font></font>
+          <div align="center"><font face="Comic Sans MS"><font size="+1"><font
+                  face="Calibri"><img moz-do-not-send="true"
+                    src="../../Res/PolyCor2.gif" alt="" width="879"
+                    height="525"></font></font></font><br>
+          </div>
+          <font face="Comic Sans MS"><font size="+1"><font
+                face="Calibri">&nbsp;<br>
+                The insert shown in the Chart window shows the spectrum
+                of the first principal component after correction. Now,
+                the user can repeat the PCA procedure specifying the
+                file CYP3A4.ASC as a file with spectral standards:<br>
+              </font></font></font>
+          <div align="center"><font face="Comic Sans MS"><font size="+1"><font
+                  face="Calibri"><img moz-do-not-send="true"
+                    src="../../Res/PolyCor3.gif" alt="" width="880"
+                    height="448"><br>
+                </font></font></font>
+            <div align="left"><font size="+1"><font face="Calibri"><font
+                    face="Calibri"><font size="+2"><span
+                        style="font-family:&quot;Comic Sans
+                        MS&quot;;mso-ansi-language: EN-US"><font
+                          size="+1">As seen from this screenshot, the
+                          traces with Principal vectors and Eigenvalues
+                          ("Dynamics of component") are now complemented
+                          with a set of newly generated spectral
+                          standards and a set of traces reflecting the
+                          changes in the concentrations of the compounds
+                          under analysis (traces 29 - 32). These four
+                          traces are shown in the Chart window, where LS
+                          is in green, HS - in blue, P420 - in dark
+                          yellow, and the total of all three P450 states
+                          is shown in magenta. Now we can divide trace
+                          30 by trace 32 to obtain a dependence of the
+                          fractional content of the high-spin state on
+                          1-PB concentration. The resulting curve is
+                          S-shaped and reveals homotropic cooperativity
+                          in protein-substrate interactions. It may be
+                          fitted to the Hill equation model in the
+                          CURFIT module. Here is the final result of our
+                          analysis:<br>
+                        </font></span></font></font></font></font>
+              <div align="center"><font size="+1"><font face="Calibri"><font
+                      face="Calibri"><font size="+2"><span
+                          style="font-family:&quot;Comic Sans
+                          MS&quot;;mso-ansi-language: EN-US"><font
+                            size="+1"><img
+src="data:image/png;base64,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"
+                              alt="" width="394" height="429"></font></span></font></font></font></font></div>
+            </div>
+          </div>
+          <font face="Comic Sans MS"><strong></strong></font>
+          <p><font face="Comic Sans MS"><strong></strong></font></p>
+        </div>
+      </blockquote>
+    </div>
+  </body>
+</html>

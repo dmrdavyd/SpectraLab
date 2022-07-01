@@ -1,0 +1,87 @@
+<!--?xml version="1.0"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=windows-1252">
+    <meta name="GENERATOR" content="DexH v03">
+    <style type="text/css">
+</style>
+    <title> </title>
+  </head>
+  <body>
+    <hr>
+    <h1><font color="#3333ff" face="Comic Sans MS">Screen Output of
+        Numerical Data and Textual Strings from SpectraLab Scripts </font></h1>
+    <hr>
+    <h2><font face="Calibri">General Information </font></h2>
+    <font face="Calibri"> </font>
+    <p><font size="+1" face="Calibri">If necessary, SpectraLab scripts
+        may display numerical and textual information in a special
+        window, so-called WinCRT window, which opens automaticaly upon
+        executing any of display functions specified below. Besides its
+        specific WinCRT functions, SpectraLab also redefines the
+        standard Forth <b>.</b> (dot), <b>F.</b> (F-dot) and <b>CR</b>
+        operators for output in WinCRT window instead of Forth console
+        (which is hidden while runing SpectraLab). It is done, in a
+        part, for compatibility with programming examples found in Forth
+        tutorials. However, the words &nbsp;<b>."</b> and &nbsp;<b>.(</b>
+        are not redefined and should not be used from SpectraLab. Use
+        TYPE$ operator instead. </font></p>
+    <font face="Calibri"> </font>
+    <h2><font face="Calibri">Basics of Using Textual Strings in Forth </font></h2>
+    <font face="Calibri"> </font>
+    <p><font size="+1" face="Calibri">According to ANS Forth standard,
+        textual strings are transfered to standard text output and
+        processing functions through the stack of integers as two
+        numbers specifying the address in the memory where the actual
+        string is located and the length of this string. The standard
+        word <b>s"</b> may be used to create such a string. This word
+        must be followed by a space, the string itself and a
+        double-quote character (<b>"</b>), which closes the string.
+        Thus, the script <b>s" Hello, World!" TYPE$"</b> prints "Hello,
+        World!" in the WinCRT window. Upon executing this script, the
+        operator <b>s"</b> allocates space in the memory, places the
+        string there, and then puts its address and length at the top of
+        the stack. Then the operator TYPE$ (see its definition below)
+        takes this information from the stack and prints the string in
+        WinCRT window. More information on operations with strings may
+        be found in Forth tutorials and Win32Forth documentation (see
+        the respective sections of this Help). </font></p>
+    <font face="Calibri"> </font>
+    <h2><font face="Calibri">Description of WinCRT Output Functions </font></h2>
+    <font face="Calibri"> </font>
+    <pre><font face="Calibri"><b><a name="0"> <font size="+1">CRT_CLOSED ( -- / -- )
+</font></a></b><font size="+1">    Checks the status of WinCRT window - returns TRUE if it is closed and FALSE othervise
+</font></font><pre><font size="+1" face="Calibri"><b><a name="1"> NOCRT ( -- / -- )
+</a></b>    Closes WinCRT window
+</font><pre><font size="+1" face="Calibri"><b><a name="2"> CRT ( -- / -- )
+</a></b>    Opens WinCRT window
+</font><pre><font size="+1" face="Calibri"><b><a name="3"> ?i_ ( n1 / -- )
+</a></b>    Types an integer in WinCRT window. The value is taken from the stack of integers.
+</font><pre><font size="+1" face="Calibri"><b><a name="4"> . ( n1 / -- )
+</a></b>    Synonim of ?i_ - redefines the standard "." function of WinForth
+</font><pre><font size="+1" face="Calibri"><b><a name="5"> ?f_ ( F1 / -- )
+</a></b>    Types a floating point value in WinCRT window. The walue is taken from F-stack
+</font><pre><font size="+1" face="Calibri"><b><a name="6"> F. ( F1 / -- )
+</a></b>    Synonim of ?i_ - redefines the standard "F." function of WinForth
+</font><pre><font size="+1" face="Calibri"><b><a name="7"> TYPE$ ( addr len / -- )
+</a></b>    Types a string in WinCRT window. The string is in the stack (addr len)
+</font><pre><font size="+1" face="Calibri"><b><a name="8"> XYTYPE$ &nbsp;( addr len n1 n2 \ -- )
+</a></b>    Typees a string in WinCRT window at x and y coordinates given by n1 and n2
+</font><pre><font size="+1" face="Calibri"><b><a name="9"> CCR ( -- / -- )
+</a></b>    Sends &lt;Carriage Return&gt; to WinCRT window (goes to the next line)
+</font><pre><font size="+1" face="Calibri"><b><a name="10"> CR ( -- / -- )
+</a></b>    Equivalent of CCR - redefines the standart CR function of WinForth
+</font><pre><font size="+1" face="Calibri"><b><a name="11"> ?F ( F1 / -- )
+</a></b>    Types a floating point value and goes to the next line
+</font><pre><font size="+1" face="Calibri"><b><a name="12"> ?I ( n1 / -- )
+</a></b>    Writes an integer and goes to the next line
+</font><pre><font size="+1" face="Calibri"><b><a name="13"> ?S ( addr len / -- )
+</a></b>    Types a string and goes to the next line
+</font><pre><font size="+1" face="Calibri"><b><a name="14"> CLEARCRT ( -- / -- )
+</a></b>    Clears WinCRT window
+</font><p></p>
+</pre></pre></pre></pre></pre></pre></pre></pre></pre></pre></pre></pre></pre></pre></pre>
+  </body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252"
+      http-equiv="Content-Type">
+    <title>CURFIT Models</title>
+  </head>
+  <body>
+    <font face="Calibri"> </font>
+    <div style="text-align: center;">
+      <div align="center">
+        <blockquote>
+          <div><font face="Calibri"><br>
+            </font>
+            <hr>
+            <h1><font color="#3333ff" face="Comic Sans MS">Mathematical
+                Models Implemented in CURFIT</font></h1>
+            <hr><font size="+2" color="#3333ff" face="Calibri"><span
+                style="font-weight: bold;"></span></font><font
+              face="Calibri"><br>
+            </font> <font size="+2" face="Calibri"><span
+                style="font-weight: bold;"> </span></font></div>
+        </blockquote>
+      </div>
+      <blockquote>
+        <div align="left"><font size="+1" face="Calibri"><u><i><b>The
+                  following fitting models are implemented in CURFIT:</b></i></u></font><font
+            size="+1" face="Calibri"><br>
+          </font><font size="+1"> </font>
+          <ul>
+            <li><font size="+1" face="Calibri"><b>Sum of exponents.</b>
+                The maximal number of exponential terms is 4. In
+                addition to the amplitudes ( F(i) ) and the kinetic
+                constants ( k(i) ), the equation also contains the
+                "Limit" parameter. Its implemented form is:</font></li>
+          </ul>
+          <font size="+1"> </font>
+          <blockquote>
+            <div align="center"><font size="+1" face="Calibri"><img
+                  moz-do-not-send="true"
+                  src="file:///E:/splab32v3/Help/Res/EQ2.gif" alt=""
+                  width="247" height="50"></font><font size="+1"
+                face="Calibri"><br>
+              </font> </div>
+            <font size="+1" face="Calibri">where <i>Y</i><i><sub>i</sub></i>&nbsp;
+
+
+
+
+
+
+
+
+
+
+              and </font><font size="+1" face="Calibri"><i>X</i><i><sub>i</sub></i>
+              are the abscissa and ordinate of the i-th point and N is
+              the number of exponents.</font><font size="+1"
+              face="Calibri"><br>
+            </font></blockquote>
+          <font size="+1"> </font>
+          <ul>
+            <li><font size="+1" face="Calibri"><b>Polynomial.</b> The
+                maximal order is 10.</font></li>
+          </ul>
+          <font size="+1"> </font>
+          <ul>
+            <li><font size="+1" face="Calibri"><b>Michaelis-Menten
+                  equation.</b> It is implemented in the following form:</font></li>
+          </ul>
+          <font size="+1"> </font>
+          <div align="center">
+            <blockquote><font size="+1" face="Calibri">&nbsp;&nbsp; <img
+src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZ4AAAAmCAIAAAB78Gr0AAAIj0lEQVR4nO1dXYLEEAx2LgdyHqdxmRzGPqiiEv9UZ31vu2YqIr5GEobpg4ODeQAppHpbiF+DkkJC5jNsiSQHB/8RIDnn2TV40ACQnAuVUu2htoODKQDJ2eG1iVCCsQS7HWo7OJgAJdghttlIvj0OtR0cdIGxeBEdYlsEJRhjAo1lHmo7OOhCTG2J9XYwGCA5oexDbQ6gpOCMMcYYfyRgEk0H/xmIy0YvtoMZUIKhLrKbGDMjEe7vKBE3bjV/oKQUnHuj4FxIBUVEZEbPpQKttRK+cSaavgVsBuNpRD71leESA8wNr2eAMbWZDsqe+ILAQ0BwhUcwK9mC0Hg4MaCczFwipACXyFwUUsYKABjC4aFU92AySWJHXhD/mWj6JsIpxhVz6bNEddvByU5LD/JaeLzbjiNqMwukwkIWCzwQPsHFgt8ys3IHo0uOJ7cR7jTFsSB5MuG6HNYwiFVqqTj1xkgYY7WdfgJ5ndg91TfHfZswMXHX+6l/eBGv3bqtc1CWCTwYt2uGDdfsE5fIjCsdibVZxyxWc6aQZDmsSaS4J03VJOVnmgYD5MLKzrzWvp7fS1LFFeMfMbqY2pqYbZ3AY0EaEijJja+2SBJU7VgageA2Q2wzJayC9eNzazBpNrYRGVeiaTAW13ZmBnY55qukmQJyzkFyxocNLqK2gj0CjkUCjwXOE29s7FC9oxlSTOa9iC3nwvu43eb4s7SDmmoaCqASPAVo866S6+/rDtsF1FefzGtluwgCCwT2MWKaETsCyV8xH1TxKLXFn1RiJ4OvITaS2lw8HXeo5zMbQKnnSaDJQFPrb6/3Vw8iqhhOEwi1NTtteoXAPgZQ23OwoAR/LR6IaR6va3uY/6bEVpthd6PBwCWkmmznStjykiuYAJIyQFBBMYpfEEdkzystuYvaor5+YSfqEIS4r1U3tIOY2nJh3TSmC/zsrG9JB2TyKq350vhjIkp2fW7bi9hS+0sUjkUeX0i8Y4mm61HXc1xxSSyI8cdcJBXQ/W1vOK/JQBNj22mau3FbO+dTRhZTG7a+KjBb4GdfXV14Y31rF+oDe6tQpxFubutWM1koSiHZHUlUBf2Hi7k+gxBnTNHCc1tlh7FY8M/uREWLgeL70d/ZiTrUvgNrEPOa7qa2qQIjXfX04kJCe9R51lDbOD0PpbY3mQ3LLMS+DlEKh6Sn+1OwLQaKOW2/SGy6n2oSmEJtMwVGeuroJYqnvG09WPQ957W9LnSA8cyGbSbJch1EJ0pEJIFn8GMRGmugHk/op7bNAg6DAN4rdfzwJlDbXIEf6KM2b4XUZfSmoYLa9mQ2kqjyX8CK9IgJyTdR/WOumT1XX+LH5YdRCtLQnrwNkm82xxfsKZMm4cAsXTXHilFe013UNk3gseGgS9hAyi3IrWJD2pPGnojKXTKdS61PITwloJ06obQGMOlRszqxsuwqn22cgYaj25bY6l9iDl5Ye84bmmWorba3mQLPoLZohbQOfBzKqW0ks41UbhW1JXavzcyWeKwff+CccyFk4qQJllaoRsO2wh+eEhtf3N/otT3SdVO4jRHU1tTZCoFj9GxIqWjtm+RWXPwxNJw5ktoGHUJoCbShj8Zmt2hyhzBbg4F6w/vBEBtyxmd4ZJ7iNb+z4vW9QmAUHdRGCPguuZWW7K5L1FSjVIHJst5qZnvkCjSmyuzrFpQz4THM1mCgfu3UnjvRZhBnF0cbc4ra6g5aLRIYRTu10eK9GHQrPWhVptuXCvVK9Hfnmoj66NoUAhaRikNlKdbFdx229Lf5LqtqA63PMH8DkKjeL6eKIpNOUVu527ZQYFLQ5i+SwpWTG0jOeKomLgjvlCniqXf8FyvK5ucdZNyjm8DJe76rk6NKxL2ZTwb/9DIM4r7GE7ACXr9EBKRYV7LbcX57W0Du4uOBBp3kNa+vdNX5QoFTXbQYQYZ2PULKy55IpDk7LTu7hT7qecuu8MlywzuitNbB28Hb5Lk6i+RNUdXM5sjSPhUQYvO+/0BEsvepBlBS9PzSQrWBEnJ/FOD/YgVZ7eJPSq9JZ6ktnfheL3BKzGpq8yUTyB3c/gXOeeFBCiFQrxMk50QT9SgsvmOnig72x8/fojLkcfacMc55Midpv0eHuYgmJYQCr0KNMUb+cLX/oeunGZBP2exfr+HWGmjdOVEwVwEIpUH66Ur3l38sI7wG20p3rwRVfatBdiRZUyVtOhag0KRZltqo0ygvCZySssJy8oIR9z2guri+IITCxDB5+5qtdnwAUmvd/otWX82vEWrINP1DOM/44mdjbcL+FezSrz9cZdbV8Agq7n0CP2fSBbymtR3zinF+dQ1qrY3DgFw2owQ3dUkVK5HYizRSm/roqcOE3a0zyc8gNLDQDoP3qv/2fbxwby8GVl6S3oCsSRdS2zJD+uoa1FprrUwk5uG2XcTWwGyIutuo7ataRW/qyDb9WxRTm/3ffZud32Bdt711mzfpUmpbVD3w1TWotdYapHCnL5zvz90hmWL9kTTYRG2b7yxIxP5vSdP/RQW12QvqlIklYwc1traYApMup7ZKt6MJX12DWmu/LOB22zynvobZEuu2hdo+o9XQEwu0kGg6sKjbkPrxtYfXZg9+b6virEnX8FrZE/vwmTWIQgnnqZkorR+tqHgvpFzXFmr7iivsOQuXU/EomkWbDm6UUlsQMYlibf4uY1e7GRZoq3poB76yBlEoV/JkoxVBwK3QTjL03kBtlyErIbdXrfsV9KhaI9F0YPAgIxOu9QIjd6MXyHUVyqAUgPTPc9n3yX7qzpt0C7UZbUyJMX5oDUYI80nPJEDpGxAkz6Sl6ifMvJV3NNCDgfALlYTyK5u4dwGhtUJ3TwdYCpR3hWdc5raZj5wz6TZeux8+nn++ugYRGwDJg81pmZEomS9175izg4ODg11xqO3g4OAH8QdxAFiQXIE+GgAAAABJRU5ErkJggg=="
+                  alt="" width="280" height="26"> </font><font
+                size="+1" face="Calibri"><br>
+              </font> </blockquote>
+          </div>
+          <font size="+1"> </font>
+          <ul>
+            <li><font size="+1" face="Calibri"><b>Sum of 2
+                  Michaelis-Menten equations:</b></font></li>
+          </ul>
+          <font size="+1"> </font>
+          <div align="center"><font size="+1" face="Calibri"><img
+                moz-do-not-send="true"
+                src="file:///E:/splab32v3/Help/Res/EQ4.gif" alt=""
+                width="494" height="27"></font></div>
+          <font size="+1"> </font>
+          <ul>
+            <li><font size="+1" face="Calibri"><b>Hill equation:</b></font></li>
+          </ul>
+          <font size="+1"> </font>
+          <div align="center"><font size="+1" face="Calibri"><img
+                moz-do-not-send="true"
+                src="file:///E:/splab32v3/Help/Res/EQ5.gif" alt=""
+                width="335" height="36"></font></div>
+          <font size="+1"> </font>
+          <ul>
+            <li><font size="+1" face="Calibri"><b>Ligand binding.</b> It
+                is an equation for the dependence of equilibrium of
+                binary association (e.g., enzyme-substrate or
+                receptor-ligand interactions) on the concentration of
+                the interacting species. This equation is also called
+                the "tight binding equation" or "square root" equation.
+                It is implemented in SpectraLab in four different
+                variants for the following cases:</font></li>
+          </ul>
+          <font size="+1"> </font>
+          <blockquote>
+            <ol type="1">
+              <li><font size="+1" face="Calibri">&nbsp;<b>Titration.</b>
+                  It is the most common case, which is applicable to
+                  titration of an enzyme (receptor) with a ligand. The
+                  abscissa value </font><font size="+1" face="Calibri">(<i>Y<sub>i</sub></i>)
+                  is presumed proportional to the concentration of the
+                  complex (with a possible offset). The ordinate values
+                  (<i>X<sub>i</sub></i>) correspond to the ligand
+                  concentration. The concentration of the enzyme (<i>Z</i>)
+                  is taken from the Z-value associated with the trace
+                  (thus, before fitting the trace, the user must place
+                  the enzyme concentration into the Z-column of the
+                  SpectraLab datasheet). The equation also includes the
+                  <i>Limit</i> and <i>A</i><sub><i>max</i></sub><i> </i>parameters,
+
+                  which correspond to the level of the signal at an
+                  infinite concentration of the ligand, and the maximal
+                  amplitude of the changes (i.e., the limit minus the
+                  signal at no ligand present), respectively:</font></li>
+            </ol>
+            <div align="center"><font size="+1" face="Calibri"><img
+                  moz-do-not-send="true"
+                  src="file:///E:/splab32v3/Help/Res/EQ6.gif" alt=""
+                  width="521" height="43"></font></div>
+            <ol start="2" type="1">
+              <li><font size="+1" face="Calibri"><b>Dilution.</b> This
+                  is the case of "titration by dilution", where the
+                  ratio of the concentrations of interacting species is
+                  kept constant, but their total concentration is
+                  changing (i.e., their mixture is diluted stepwise). In
+                  this case, the Z-value associated with the trace
+                  should be set to the ratio of the concentration of
+                  ligand to that of the enzyme, and the ordinate values
+                </font><font size="+1" face="Calibri">(<i>X<sub>i</sub></i>)
+                  should contain the enzyme concentrations. In this
+                  case, the equ</font><font size="+1" face="Calibri">ation
+                  has the following form. The <i>Y</i><sub>i</sub>
+                  values should be normalized proportionally to dilution
+                  prior to fitting:</font></li>
+            </ol>
+            <div align="center">
+              <blockquote><font size="+1" face="Calibri"><img
+                    moz-do-not-send="true"
+                    src="file:///E:/splab32v3/Help/Res/EQ7.gif" alt=""
+                    width="610" height="47"></font></blockquote>
+            </div>
+            <ol start="2" type="1">
+            </ol>
+            <ol start="3" type="1">
+              <li><font size="+1" face="Calibri"><b>Dimerization. </b>This
+
+
+
+
+
+
+
+
+
+                  is an equation for the position of equilibrium of
+                  protein dimerization. Z-value is not used in this
+                  case. The ordinate values correspond to the protein
+                  concentration:</font></li>
+            </ol>
+            <div align="center"><font size="+1" face="Calibri"><img
+                  moz-do-not-send="true"
+                  src="file:///E:/splab32v3/Help/Res/EQ8.gif" alt=""
+                  width="476" height="41"></font></div>
+            <ol start="4" type="1">
+              <li><font size="+1" face="Calibri"><b>Job's titration.</b>
+                  This is the case of Job's titration experiment, where
+                  the total concentration of the interacting compounds
+                  remains constant but their ratio changes. In this
+                  case, the Z-value should be set to the total
+                  concentration of the reagents, and the ordinate values
+                  correspond to the molar fraction of the ligand (should
+                  be within the 0 to 1 range):</font></li>
+            </ol>
+            <div align="center"><font size="+1" face="Calibri"><img
+                  moz-do-not-send="true"
+                  src="file:///E:/splab32v3/Help/Res/EQ9.gif" alt=""
+                  width="529" height="47"></font></div>
+          </blockquote>
+          <font size="+1"> </font>
+          <ul>
+            <li><font size="+1" face="Calibri"><b>Infinite cooperativity
+                  binding.</b> This is the case of simultaneous binding
+                of a ligand (<i>S</i>) to <i>n</i> binding centers in a
+                protein (<i>E</i>) with the formation of the complex <i>ES</i><sub>n</sub>.
+                The number of binding centers can be varied from 1 to
+                10. </font><font size="+1" face="Calibri">The
+                concentration of the complex </font><font size="+1"
+                face="Calibri"><i>ES<sub>n</sub></i> is calculated by
+                solving (numerically) the following equation relative to
+                [<i>ES<sub>n</sub></i>]: <br>
+              </font></li>
+          </ul>
+          <font size="+1"> </font>
+          <div align="center"><font size="+1" face="Calibri"><img
+                moz-do-not-send="true"
+                src="file:///E:/splab32v3/Help/Res/EQ10.gif" alt=""
+                width="369" height="33"><br>
+            </font>
+            <div align="left">
+              <blockquote><font size="+1" face="Calibri">where [<i>E</i>]<sub>0</sub>
+                  and [<i>S</i>]<sub>0</sub> are the total concentration
+                  of enzyme and substrate, respectively. </font><font
+                  size="+1" face="Calibri">The ordinate values (<i>X<sub>i</sub></i>)
+                  correspond to the ligand concentration. The
+                  &#1089;oncentration of the enzyme is taken from the Z-value
+                  associated with the trace. </font><font size="+1"
+                  face="Calibri">In the case of n=1, this model is
+                  similar to that of the tight-binding equation (see
+                  "Ligand binding" case above). The abscissa values (<i>Y<sub>i</sub></i>)
+                  are presumed proportional to the concentration of the
+                  complex <i>ES<sub>n </sub></i>with a possible
+                  offset:&nbsp; </font><font size="+1" face="Calibri"><img
+                    moz-do-not-send="true"
+                    src="file:///E:/splab32v3/Help/Res/EQ11.gif" alt=""
+                    width="223" height="29" align="middle"></font> </blockquote>
+              <blockquote><font size="+1" face="Calibri">This model is
+                  realized in three variants: for the ordinary titration
+                  case, for Job's titration in its regular setup, and
+                  for Job's titration in its "counterflow" (tandem cell)
+                  setup (see <a moz-do-not-send="true"
+                    href="https://doi.org/10.1016/j.bpc.2006.04.007">Davydov
+
+
+
+
+
+
+
+
+
+                    et al., 2006</a> for more details).</font><font
+                  size="+1" face="Calibri"><br>
+                </font> </blockquote>
+            </div>
+          </div>
+          <font size="+1"> </font>
+          <ul>
+            <li><font size="+1" face="Calibri"><b>2-nd order kinetics.</b>
+                This model is for the kinetics of product formation in
+                an irreversible bimolecular reaction, <i>A </i>+ <i>B</i>&#8594;<i>C</i>.&nbsp;
+              </font><font size="+1" face="Calibri">The abscissa value (<i>Y<sub>i</sub></i>)
+                is presumed proportional to the concentration of the
+                product (<i>C</i>) with a possible offset. The ordinate
+                values (<i>X<sub>i</sub></i>) correspond to the time
+                coordinate. When selecting this model, the user will be
+                asked for the ratio of reagents (<i>r</i>=[<i>A</i>]<sub>0</sub>/[<i>B</i>]<sub>0</sub>).&nbsp;
+The
+
+
+
+
+
+
+
+                ratio is expected to be greater or equal to unity&nbsp;
+                (<i>r</i>&#8805;1)</font><font size="+1" face="Calibri"> so
+                that the lowest of the two concentrations is taken as
+                the base. T</font><font size="+1" face="Calibri">he
+                values from 1.0 to 10<sup>9</sup> are allowable.&nbsp;
+                As it is known from the chemical kinetic textbooks, the
+                second-order kinetics equations for <i>r</i>=1 and <i>r</i>&#8800;1
+                differ.&nbsp; They are implemented in SpectraLab in the
+                following forms:</font></li>
+          </ul>
+          <font size="+1"> </font>
+          <blockquote>
+            <ol>
+              <li><font size="+1" face="Calibri"><b>&nbsp;r=1:</b>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; <b><img
+                      moz-do-not-send="true"
+                      src="file:///E:/splab32v3/Help/Res/EQ12.gif"
+                      alt="" width="222" height="57" align="middle"></b>
+                </font></li>
+              <li><font size="+1" face="Calibri"><b>r&gt;1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img
+                      moz-do-not-send="true"
+                      src="file:///E:/splab32v3/Help/Res/EQ13.gif"
+                      alt="" width="285" vspace="3" height="51"
+                      align="middle"></b></font></li>
+            </ol>
+            <font size="+1" face="Calibri">In these equations, <i>k</i><i><sub>I</sub>
+              </i>is the second-order rate constant multiplied by the
+              lesser of the concentrations of the two compounds</font><font
+              size="+1" face="Calibri">. Thus, to obtain the
+              second-order rate constant from this parameter (which is
+              labeled "k[A0]" in the fitting output), one should divide
+              it by the lesser of the initial concentrations of the
+              interacting compounds </font><font size="+1"
+              face="Calibri">(or any of them if <i>r</i>=1).&nbsp; <br>
+            </font></blockquote>
+          <font size="+1"> </font>
+          <ul>
+            <li><font size="+1" face="Calibri"><b>Kinetics of reversible
+                  second-order reaction. </b></font><font size="+1"
+                face="Calibri"><b> </b>This model is for the kinetics
+                of reversible association of two compounds,&nbsp; <i>A
+                </i>+ <i>B</i>&#8596;<i>C</i>.&nbsp; It is applicable to the
+                kinetics of the formation of enzyme-substrate or
+                receptor-ligand complexes, even at comparable
+                concentrations of interacting compounds. Here again, the
+                abscissa value (<i>Y<sub>i</sub></i>) is presumed
+                proportional to the concentration of the product (<i>C</i>),
+                and the ordinate corresponds to the time coordinate. The
+                kinetic equation for this case may be found in the <a
+                  moz-do-not-send="true"
+                  href="https://www.twirpx.com/file/3131230/">"Kinetic
+                  methods in biochemical research" book by Varfolomeev
+                  and Zaitsev </a>(page 183, equations 8.22 - 8.24). In
+                a slightly different form, it is published in <a
+                  moz-do-not-send="true"
+                  href="https://doi.org/10.3389/fimmu.2017.01692">Lehnert
+
+
+
+
+
+
+                  and Figge, 2017</a> (equation 11), although the
+                expression found in this article contains a typo (there
+                should be <i>C<sub>+ </sub></i>instead of <i>C</i><sub><i>-</i></sub>
+                in the denominator). Kinetic model for this case
+                implemented in SpectraLab is based on the following
+                relationship that determines the time course of the
+                changes in the concentration of product (<i> C(t) </i>):</font></li>
+          </ul>
+          <font size="+1"> </font>
+          <div align="center">
+            <blockquote><font size="+1" face="Calibri"><img
+                  moz-do-not-send="true"
+                  src="file:///E:/splab32v3/Help/Res/EQ14.gif" alt=""
+                  width="266" height="74"><br>
+              </font>
+              <div align="left"><font size="+1" face="Calibri">where&nbsp;
+                  <img moz-do-not-send="true"
+                    src="file:///E:/splab32v3/Help/Res/EQ15.gif" alt=""
+                    width="363" height="55" align="middle">,&nbsp; <img
+                    moz-do-not-send="true"
+                    src="file:///E:/splab32v3/Help/Res/EQ16.gif" alt=""
+                    width="68" height="45" align="middle">, and <i>A</i><sub>0</sub>
+                  and <i>B</i><sub>0</sub> correspond to the initial
+                  concentrations of the interacting species. </font><font
+                  size="+1" face="Calibri">The ordinate values (<i>X<sub>i</sub></i>)
+                  correspond to the ligand concentration. </font><font
+                  size="+1" face="Calibri">The abscissa values (<i>Y<sub>i</sub></i>)
+                  are presumed proportional to the concentration of the
+                  product of association with a possible offset:<br>
+                </font>
+                <div align="center"><font size="+1" face="Calibri">&nbsp;
+                    <img moz-do-not-send="true"
+                      src="file:///E:/splab32v3/Help/Res/EQ17.gif"
+                      alt="" width="194" height="23" align="middle"></font><font
+                    size="+1" face="Calibri"><br>
+                  </font> </div>
+                <font size="+1" face="Calibri">When selecting this
+                  model, the user will be asked for the molar ratio of
+                  the ligand to the enzyme. The values </font><font
+                  size="+1" face="Calibri"> from 10<sup>-9</sup> to 10<sup>9</sup>
+                  are allowed for this parameter.&nbsp; <i>Z</i>-value
+                  associated with the trace should be set to the initial
+                  concentration of the enzyme before fitting to this
+                  model. </font><font size="+1" face="Calibri"><br>
+                </font> </div>
+            </blockquote>
+          </div>
+          <font size="+1"> </font>
+          <ul>
+            <li><font size="+1" face="Calibri"><b>&nbsp;Arrhenius
+                  equation</b> for the temperature dependence of the
+                kinetic constant of a chemical reaction:</font></li>
+          </ul>
+          <font size="+1"> </font>
+          <blockquote>
+            <div align="center"><font size="+1" face="Calibri"><img
+                  moz-do-not-send="true"
+                  src="file:///E:/splab32v3/Help/Res/EQ18.gif" alt=""
+                  width="129" height="30" align="middle"><br>
+              </font> </div>
+            <font size="+1" face="Calibri">The ordinate values (<i>X<sub>i</sub></i>)
+              should be set to temperature on the Celsius scale. The
+              abscissa values (<i>Y<sub>i</sub></i>) are presumed
+              proportional to the reaction rate. The parameters
+              estimated by the fitting are the pre-exponential factor (<i>A</i>)
+              and the energy of activation (<i>E</i><sub>a</sub>), which
+              is given in kJ/mol units.&nbsp; </font><font size="+1"
+              face="Calibri"><br>
+            </font> </blockquote>
+          <font size="+1"> </font>
+          <ul>
+            <li><font size="+1" face="Calibri"><b>Pressure dependence of
+                  equilibrium. </b>This model is for pressure
+                dependence of the position of equilibrium in a
+                reversible first-order transition, </font><font
+                size="+1" face="Calibri"><i>A </i>&#8596;<i> B, </i>characterized
+                with the pressure-dependent constant of equilibrium, <i>K</i><sub>eq</sub>=[<i>A</i>]/[<i>B</i>].
+
+
+
+
+
+                As described in <a moz-do-not-send="true"
+                  href="https://link.springer.com/book/9780412030314">"Protein
+
+
+
+
+
+                  interactions" book by Gregory Weber</a> (p. 212, Eq.
+                9), when expressed relative to the molar fraction of
+                compound <i>A</i> </font><font size="+1"
+                face="Calibri">at pressure <i>P</i> (</font><font
+                size="+1" face="Calibri"><i>A<sub>p</sub></i>), this
+                dependence obeys the following relationship: <br>
+              </font></li>
+          </ul>
+          <font size="+1"> </font>
+          <div align="center">
+            <blockquote><font size="+1" face="Calibri"><i><img
+                    moz-do-not-send="true"
+                    src="file:///E:/splab32v3/Help/Res/EQ19.gif" alt=""
+                    width="420" height="53"><br>
+                </i></font>
+              <div align="left"><font size="+1" face="Calibri">where <i>&#916;V</i>°
+                  is the molar volume change in the transition,&nbsp; <i>P</i><sub>½</sub>
+                  is the pressure at which </font><font size="+1"
+                  face="Calibri"><i>K<sub>eq</sub></i>=0 and </font><font
+                  size="+1" face="Calibri">K°<sub>eq</sub> is the value
+                  of <i>K<sub>eq</sub></i> extrapolated to zero:&nbsp;<img
+                    moz-do-not-send="true"
+                    src="file:///E:/splab32v3/Help/Res/EQ20.gif" alt=""
+                    width="90" height="30" align="middle">. The form of
+                  this relationship implemented in SpectraLab is:<br>
+                </font>
+                <div align="center"><font size="+1" face="Calibri"><img
+                      moz-do-not-send="true"
+                      src="file:///E:/splab32v3/Help/Res/EQ21.gif"
+                      alt="" width="227" height="56">&nbsp;<br>
+                  </font>
+                  <div align="left"><font size="+1" face="Calibri">The
+                      ordinate values (<i>X<sub>i</sub></i>) correspond
+                      to hydrostatic pressure. The abscissa values (<i>Y<sub>i</sub></i>)
+                      are presumed to be equal to a sum of a value
+                      proportional to the molar fraction of compound <i>A
+                      </i>(<i>A<sub>p</sub></i>)<i>,&nbsp; </i>and a </font><font
+                      size="+1" face="Calibri">possible offset (<i>A</i><sub>0</sub>).
+                    </font><font size="+1" face="Calibri"><font
+                        size="+1" face="Calibri">Z-value associated with
+                        the trace should be set to temperature expressed
+                        on Celsius scale. If Z-vale is not set, </font></font><font
+                      size="+1" face="Calibri"><font size="+1"
+                        face="Calibri"><font size="+1" face="Calibri"><font
+                            size="+1" face="Calibri">25 °C </font></font>temperature
+                        is assumed by default.</font> If </font><font
+                      size="+1" face="Calibri"><i>X<sub>i </sub></i>is
+                      expressed in bars, </font><font size="+1"
+                      face="Calibri"><i>P</i><sub>½</sub> and </font><font
+                      size="+1" face="Calibri"><i>&#916;V</i>° values
+                      resulting from the fitting are expressed in bars
+                      and ml/mol, respectively. If </font><font
+                      size="+1" face="Calibri"><i>&#916;V</i>° is negative,
+                      increasing pressure displaces the equilibrium
+                      towards compound <i>A</i>. Otherwise, it is
+                      displaced towards <i>B</i>.<br>
+                    </font></div>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <font size="+1"> </font>
+          <ul>
+          </ul>
+          <ul>
+            <li><font size="+1" face="Calibri"><b>Trimerization</b> <b>equilibrium</b>.
+                This model describes the concentrational dependence of
+                reversible trimerization of a compound, 3</font><font
+                size="+1" face="Calibri"><i>A </i>&#8596;<i> A<sub>3</sub></i>,
+                in which the equilibrium is determined by the
+                dissociation constant <i>K</i><sub>D</sub>.&nbsp; </font><font
+                size="+1" face="Calibri">Ordinate corresponds to the
+                total concentration of the protein, and the abscissa is
+                presumed proportional to the concentration of trimers
+                with a possible offset. </font><font size="+1"
+                face="Calibri">Z-value is not used. The underlying
+                mathematical equations may be found </font><font
+                size="+1" face="Calibri">in <a moz-do-not-send="true"
+                  href="https://doi.org/10.1074/jbc.M114.615443">Davydov
+                  et al., 2015</a>.</font></li>
+          </ul>
+          <font size="+1"> </font>
+          <ul>
+            <li><font size="+1" face="Calibri"><b>Combination of the
+                  Hill and substrate inhibition equations. </b>This
+                model is described in <a moz-do-not-send="true"
+                  href="http://dx.doi.org/10.1021/bi5011656">Muller et
+                  al, 2015</a>. Ordinate corresponds to the substrate
+                concentration and the abscissa is presumed proportional
+                to the enzymatic activity with a possible offset.
+                Z-value is not used.</font></li>
+          </ul>
+          <ul>
+            <li><font size="+1" face="Calibri"><b>Two-site binding of a
+                  ligand. </b></font><font size="+1" face="Calibri">This
+                is the case of parallel or sequential models of binding
+                of a ligand (<i>S</i>) to two binding sites of a protein
+                (<i>E</i>) described in <a moz-do-not-send="true"
+                  href="https://doi.org/10.1021/bi052491b">Fernando et.
+                  al, 2006</a> and <a moz-do-not-send="true"
+                  href="https://doi.org/10.3109/00498254.2010.538748">Fernando
+
+
+
+                  et.al., 2011</a>. The observed signal is presumed to
+                reflect the formation of both binary (SE) and ternary
+                (SES) complexes, where the ratio of the amplitudes of
+                the signal from SE to the total of those from SES and SE
+                is determined by the parameter F(SE). Thus, at
+                F(SE)=0.5, the formation of both types of complexes
+                results in the signal of a same amplitude. This model
+                also allows the observed signal (<i>Y</i><sub>i</sub>)
+                to include a constant offset. Similar to the "Ligand
+                binding" model, this offset is determined by the
+                combination of<i> </i>the<i> Limit</i> and <i>A<sub>max</sub></i>
+                parameters. X-coordinate corresponds to the
+                concentration of the ligand. Z-value associated with the
+                trace should be set at the concentration of the protein.
+                Upon selecting this model, the user will be asked to
+                select between the Parallel and Sequential binding
+                sub-models. The underlying mathematical equations may be
+                found </font><font size="+1" face="Calibri">in <a
+                  moz-do-not-send="true"
+                  href="https://doi.org/10.1021/bi052491b">Fernando et.
+                  al, 2006</a> and <a moz-do-not-send="true"
+                  href="https://doi.org/10.3109/00498254.2010.538748">Fernando
+
+
+
+                  et.al., 2011</a>.</font></li>
+          </ul>
+          <ul>
+            <li><font size="+1" face="Calibri"><b>Two-site binding of a
+                  ligand, </b><b>Job's titration case.</b> This is the
+                same model as above but realized for the case of Job's
+                (continuous variation) titration in its traditional
+                ("Bell") and "counterflow" ("Tandem", </font><font
+                size="+1" face="Calibri"><a moz-do-not-send="true"
+                  href="https://doi.org/10.1016/j.bpc.2006.04.007">Davydov
+
+
+
+
+
+
+
+
+
+                  et al., 2006</a>) implementations. In this case, the <i>Z</i>-value
+                should be set to the total concentration of the
+                interacting species, and the ordina (</font><font
+                size="+1" face="Calibri"><i>X<sub>i</sub></i>) should
+                correspond to the molar fraction of the ligand at each
+                point of the titration.&nbsp;</font></li>
+          </ul>
+          <ul>
+          </ul>
+        </div>
+      </blockquote>
+    </div>
+    <font face="Calibri"> </font>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+5 tvn| :OBJECT LEFTPANE| tvd| 1022|
+6 tvn| -methods-| tvd| 0|
+5 tvn| :OBJECT RIGHTPANE| tvd| 1027|
+6 tvn| -methods-| tvd| 0|
+5 tvn| :OBJECT SPLAB-CONTROLS| tvd| 1031|
+6 tvn| -methods-| tvd| 0|
+5 tvn| :OBJECT SPLITTER| tvd| 1101|
+6 tvn| -methods-| tvd| 0|
+5 tvn| :OBJECT INFOWINDOW| tvd| 1102|
+6 tvn| -methods-| tvd| 0|
+5 tvn| :OBJECT ESTIMA-FRM| tvd| 1110|
+6 tvn| -methods-| tvd| 0|
+5 tvn| :OBJECT SETPRM-FRM| tvd| 1145|
+6 tvn| -methods-| tvd| 0|
+5 tvn| :OBJECT CURFITWINDOW| tvd| 1164|
+6 tvn| -methods-| tvd| 0|
+5 tvn| :OBJECT SPANFORM| tvd| 1186|
+6 tvn| -methods-| tvd| 0|
+5 tvn| :OBJECT SURFITFORM| tvd| 1202|
+6 tvn| -methods-| tvd| 0|
+5 tvn| :OBJECT CORFORM| tvd| 1219|
+6 tvn| -methods-| tvd| 0|
+4 tvn| :OBJECT CONSOLEWINDOW| tvd| 1246|
+5 tvn| -methods-| tvd| 0|
+4 tvn| :OBJECT SCHART| tvd| 1252|
+5 tvn| -methods-| tvd| 0|
+4 tvn| :OBJECT SPLAB-MAIN| tvd| 1259|
+5 tvn| -methods-| tvd| 0|
+6 tvn| :OBJECT CONSOLESTATUSBAR| tvd| 1273|
+7 tvn| -methods-| tvd| 0|
+5 tvn| :OBJECT LISTVIEWLEFT| tvd| 1279|
+6 tvn| -methods-| tvd| 0|
+5 tvn| :OBJECT LISTVIEWRIGHT| tvd| 1280|
+6 tvn| -methods-| tvd| 0|
+4 tvn| :OBJECT ABOUT-FORTH-DIALOG| tvd| 1281|
+5 tvn| -methods-| tvd| 0|
+4 tvn| :OBJECT PAGE-UP-DIALOG| tvd| 1287|
+5 tvn| -methods-| tvd| 0|
+2 tvn| :OBJECT SPANPAR| tvd| 1289|
+3 tvn| -methods-| tvd| 0|

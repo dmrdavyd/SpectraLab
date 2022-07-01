@@ -1,0 +1,97 @@
+\ $Id: HelpSummary.tv for SpLab,v 0.01 2018/12/31 Exp $
+
+\                          HELP SUMMARY DESCRIPTION
+
+\ How to describe the html help treeview :
+\ ----------------------------------------
+\
+\ Each line describes an entry in the treeview.
+\ This file is interpreted by Forth so empty lines and Forth comments may be used.
+
+\ A treeview line entry has the following format :
+\
+\           n     tvn| name|     tvd| link|
+\
+\ - n           is the depth of the treeview item (beginning with 0 for root)
+\ - tvn| name|  is the name of the treeview item (leading blanks allowed for indentation)
+\ - tvd| link|  is the data associated with the treeview item, actually an url.
+
+\               name and link may include a char "|" provided that this "|" is immediately
+\               followed by a non blank char.
+\
+\               In fact, this type of file can be used to define any kind of TreeView :
+\               - link can be a number too
+\               - if n>0 items are inserted TVI_LAST, if n<0, items are inserted TVI_SORT
+
+\ Treeview icons are automatically inserted, using the following rules:
+\
+\ If a line holds an empty link information, the treeview entry is considered as a
+\ summary line and will receive "closed book" and "open book" icons.
+\ If a line holds a file .htm link (with sub-path), it will recieve a "help sheet" icon.
+\ If the local html link is "help\html\w32f-todo.htm", the "help sheet" will be grayed.
+\ If the html link is for an acrobat file, the icon will be "acrobat".
+\ If the link begins with "http://" or "mailto:" or "news:", the icon will be "world".
+
+
+
+
+0 tvn|    General Notes about SpectraLab and its Help System|    tvd| help\html\SpLab\splab-help.htm| 
+0 tvn|    SpectraLab User's Guide|                tvd| |
+1 tvn|       Software Overview|                   tvd| help\html\SpLab\splab-main.htm|
+1 tvn|       User Interface|                      tvd| help\html\splab\splab-interface.htm|
+1 tvn|    Tools for Data Analysis, Processing and Fitting|       tvd| |
+2 tvn|      General Overview|                     tvd| Help\html\SpLab\Mathematics.htm|
+2 tvn|      Curve Fitting (Non-linear regression)| tvd| |
+3 tvn|       Description of the CURFIT module|     tvd| help\html\SpLab\CURFIT.htm|
+3 tvn|       Mathematical Models Implemented in CURFIT| tvd| Help\html\SpLab\CURFIT_models.htm|
+2 tvn|      SURFIT: Fitting Datasets by Spectral Standards| tvd| Help\html\SpLab\SURFIT.HTM|
+2 tvn|      SPAN: Principal Component Analysis Module| tvd| Help\html\SpLab\SPAN.HTM|
+2 tvn|      Spectra Pre-Processing Tools|          tvd| Help\html\SpLab\Macros.htm|
+1 tvn|    SpectraLab Scripting Language and the Elements of Forth Programming|        tvd| |
+2 tvn|    General information|                    tvd| help\html\SpLab\Script-Overview.htm |
+2 tvn|    Basic Principles and Glossary of SpectraLab Scripts|          tvd| help\html\splab\splab-scripts.htm|
+2 tvn|    Screen Output of Textual and Numeric Data from SpectraLab|       tvd| help\html\splab\splab-CRT.htm|
+0 tvn|    Forth Programming Guide|                tvd| |
+1 tvn|     Forth tutorials & ebooks|               tvd| help\html\w32f-books.htm|           \ <-- OK
+1 tvn|     Win32Forth documentation|            tvd| |
+2 tvn|       Win32Forth Generalities|             tvd| help\html\w32f-generalities.htm|    \ <-- OK
+2 tvn|       Win32Forth reference|                tvd| |
+3 tvn|          Forth engine|                     tvd| help\html\w32f-forthengine.htm|     \ ???
+3 tvn|          Data types & structures|          tvd| |
+4 tvn|             Forth data types|              tvd| help\html\w32f-forthtypes.htm|      \ <-- OK
+4 tvn|             Local variables|               tvd| help\html\w32f-locals.htm|          \ <-- OK  + w32f-locals-stack.gif
+4 tvn|             Memory management|             tvd| help\html\w32f-memory.htm|          \ ??? add new$
+4 tvn|             Data structures|               tvd| help\html\w32f-structures.htm|      \ <-- OK
+3 tvn|          Data and return stack operators|  tvd| help\html\w32f-stacks.htm|          \ <-- OK
+3 tvn|          Numbers|                          tvd| |
+4 tvn|             ASCII to number conversion|    tvd| help\html\w32f-numconv.htm|         \ <-- OK
+4 tvn|             Number to ASCII conversion|    tvd| help\html\w32f-dspnumber.htm|       \ <-- OK
+4 tvn|             Integer arithmetic|            tvd| help\html\w32f-arithm.htm|          \ <-- OK
+4 tvn|             Floating point package|        tvd| help\html\dexh-float.htm|           \ <-- OK
+3 tvn|          Boolean & comparisons operators|  tvd| help\html\w32f-boolean.htm|         \ <-- OK
+3 tvn|          Strings|                          tvd| |
+4 tvn|             Strings handling|              tvd| help\html\w32f-strings.htm|         \ <-- OK
+4 tvn|             Unicode Strings|               tvd| help\html\dexh-unicode.htm|         \ <-- OK
+3 tvn|          Flow control|                     tvd| |
+4 tvn|             Basic flow control|            tvd| help\html\w32f-flowcontrol.htm|     \
+4 tvn|             Using -IF|                     tvd| help\html\w32f-using-if.htm|        \ <-- OK ??? with flow control ?
+4 tvn|             Switches|                      tvd| Help\html\dexh-switch.htm|          \ <-- OK ??? with flow control ?
+4 tvn|             Chains|                        tvd| help\html\w32f-chains.htm|          \ <-- OK
+3 tvn|          The Search Order|                 tvd| |                                   \ <-- OK
+4 tvn|             Wordlists & Vocabularies|      tvd| help\html\w32f-vocabulary.htm|      \ <-- OK
+4 tvn|             Using the Module Wordset|      tvd| help\html\dexh-module.htm|          \ <-- OK
+3 tvn|          Source compiling tools|           tvd| help\html\dexh-interpif.htm|        \ <-- OK
+3 tvn|          Task Wordset|                     tvd| help\html\dexh-task.htm|            \ <-- OK
+3 tvn|          Files handling|                   tvd| help\html\w32f-files.htm|           \ <-- OK
+3 tvn|          OS environment|                   tvd| |
+4 tvn|             File & Directory searching words| tvd| help\html\dexh-ansfile.htm|         \ <-- OK
+4 tvn|             Multiple search path support|     tvd| help\html\dexh-paths.htm|           \ <-- OK
+4 tvn|             FLoadCmdLine shell integration|   tvd| help\html\dexh-floadcmdline.htm|    \ <-- OK
+3 tvn|          Miscellaneous utilities|          tvd| |
+4 tvn|             Miscellaneous utilities|       tvd| help\html\w32f-utils.htm|           \ <-- ??? to clean a bit
+4 tvn|             The Block Wordset|             tvd| help\html\dexh-block.htm|           \ <-- OK
+4 tvn|             Random Number Generator|       tvd| help\html\w32f-random.htm|          \ <-- OK
+1 tvn|     ANS Forth standard|                     tvd| |
+2 tvn|       ANS Forth standard|                  tvd| help\html\dpans\dpans.htm|          \ <-- OK + help\html\dpans\*.*
+2 tvn|       ANS Forth words index|               tvd| help\html\dpans\dpansf.htm|         \ <-- OK + help\html\dpans\*.*
+2 tvn|       Win32Forth ANS compliance|           tvd| help\html\w32f-ansi.htm|            \ <-- OK

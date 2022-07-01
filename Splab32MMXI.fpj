@@ -1,0 +1,38 @@
+ProjectName= splab-MMX
+BuildFile= E:\splab32v3\splab32-3.f
+SearchPath= E:\splab32v3\
+splab-MMX,0
+Modules,27
+E:\splab32v3\splab32-3.f
+E:\splab32v3\ZSTRINGS.f
+E:\splab32v3\FLO2INT.F
+E:\splab32v3\NANS.F
+E:\splab32v3\SPN_DEF.F
+E:\splab32v3\Curfit.F
+E:\splab32v3\WGRAKRN.F
+E:\splab32v3\Estima-frm.F
+E:\splab32v3\SetPrm-Frm.F
+E:\splab32v3\SpecTools.F
+E:\splab32v3\SpecArithm.F
+E:\splab32v3\CIPSUBSTITUTES.F
+E:\splab32v3\CIP-SCRIPTS.f
+E:\splab32v3\SurfitFrm.f
+E:\splab32v3\CorForm.F
+E:\splab32v3\Span.F
+E:\splab32v3\AcceleratorTables.f
+E:\splab32v3\OO_CTL.f
+E:\splab32v3\EI_CTL.F
+E:\splab32v3\FLUO_CTL.F
+E:\splab32v3\INSTR-DUMMY.F
+E:\splab32v3\FKEYS.F
+E:\splab32v3\PTI_CTL.f
+E:\splab32v3\DIALOGRC2.f
+E:\splab32v3\fdlg.f
+E:\splab32v3\SplabDlg.f
+E:\splab32v3\SPL32CRT.f
+DLLs,0
+Forms,0
+Auxiliary Files,0
+Resources,1
+E:\splab32v3\SPLAB32.ICO
+Docs,0
