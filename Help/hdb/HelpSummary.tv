@@ -83,14 +83,6 @@
 3 tvn|          Source compiling tools|           tvd| help\html\dexh-interpif.htm|        \ <-- OK
 3 tvn|          Task Wordset|                     tvd| help\html\dexh-task.htm|            \ <-- OK
 3 tvn|          Files handling|                   tvd| help\html\w32f-files.htm|           \ <-- OK
-3 tvn|          OS environment|                   tvd| |
-4 tvn|             File & Directory searching words| tvd| help\html\dexh-ansfile.htm|         \ <-- OK
-4 tvn|             Multiple search path support|     tvd| help\html\dexh-paths.htm|           \ <-- OK
-4 tvn|             FLoadCmdLine shell integration|   tvd| help\html\dexh-floadcmdline.htm|    \ <-- OK
-3 tvn|          Miscellaneous utilities|          tvd| |
-4 tvn|             Miscellaneous utilities|       tvd| help\html\w32f-utils.htm|           \ <-- ??? to clean a bit
-4 tvn|             The Block Wordset|             tvd| help\html\dexh-block.htm|           \ <-- OK
-4 tvn|             Random Number Generator|       tvd| help\html\w32f-random.htm|          \ <-- OK
 1 tvn|     ANS Forth standard|                     tvd| |
 2 tvn|       ANS Forth standard|                  tvd| help\html\dpans\dpans.htm|          \ <-- OK + help\html\dpans\*.*
 2 tvn|       ANS Forth words index|               tvd| help\html\dpans\dpansf.htm|         \ <-- OK + help\html\dpans\*.*

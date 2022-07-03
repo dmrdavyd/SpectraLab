@@ -72,6 +72,8 @@ modules/
 *.prm
 *.spc
 *.asc
+*.dx
+*.dat
 *.ini
 *.htm
 *.html

@@ -24,8 +24,11 @@ PushButton FileButton
 PushButton RunButton
 PushButton CancelButton
 
+0 Value Surfit_In_Progress
+
 :M ClassInit:   ( -- )
                 ClassInit: super
+                NOCRT
                 \ Insert your code here
                 ;M
 
@@ -56,7 +59,8 @@ PushButton CancelButton
 ;M
 
 :M Close:        ( -- )
-                \ Insert your code here
+                call CRTCLRSCR depth if DROP then
+                NOCRT
                 Close: super
                 ;M
 :M Set-Values:
@@ -219,9 +223,10 @@ PushButton CancelButton
                   GETID: FileButton of
                     select-std-file: self
                   endof
-                  CRT_IS_ON if NOCRT then
+ \                 CRT_IS_ON if NOCRT then
                   GETID: RunButton of
                      Get-Values: self if
+                       CRT
                        FILEFIT if
                          Surfit-by-File
                        else
@@ -233,10 +238,7 @@ PushButton CancelButton
                          polydest 3 !lista
                          0 4 !lista
                          plot-list
-                         call ShowCRT
-                         127 = if -1 to CRT_IS_ON else NOCRT then
                          SetCurveList: DATA-WINDOW
-                         Close: self
                        then
                      else
                       s" Invalid parameters. Please, check."

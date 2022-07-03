@@ -94,7 +94,7 @@ CREATE &FTMP 10 ALLOT
      CRT_CLOSED not if call CRTCLRSCR depth if DROP then then
 ;
 
-Redefine ALSO DEFINITIONS
+turnkey? [if]
 : . ( n1 / -- )
 \ *G Synonim of ?i_ - redefines the standard "." function of WinForth
  ?i_ ;
@@ -106,7 +106,7 @@ Redefine ALSO DEFINITIONS
 : CR ( -- / -- )
 \ *G Equivalent of CCR - redefines the standart CR function of WinForth
    CCR ;
-
+[then]
 
 
 

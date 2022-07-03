@@ -1,7 +1,7 @@
 \ *!  Splab-main
 \ *T SpectraLab Data Analysis and Data Aquisition Software
 \ ** by Dmitri R. Davydov \n \n
-\ ** \iVersion 3.1.1 (June 2022)\d
+\ ** \iVersion 3.1.1 (June 30, 2022)\d
 
 true value turnkey?
 \
@@ -151,9 +151,6 @@ INST-OO [IF]
 
 ONLY FORTH ALSO Utilities ALSO SPN_DEF ALSO GRAKERN ALSO SPL32CRT ALSO SpecArithm ALSO
 SpecTools ALSO Resources ALSO Instrument ALSO
-turnkey? [if]
-Redefine ALSO    ( comment this line if no re-defining ".", "F." and "CR" is needed )
-[then]
 SpectraLab ALSO Definitions
 
 
