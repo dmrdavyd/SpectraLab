@@ -1,7 +1,7 @@
 unit Spl32arith;
 
 interface
-uses math,spl32def,Spl32Base,SPL32_01,Spn_08,Spn_Pcor,matrix,SplabMessages;
+uses math,spl32def,Spl32Base,SPL32_01,Spn_08,Spn_Pcor,mdefine,matrix,SplabMessages;
 const maxstack=-1*mincur;
       plus=1;
       minus=2;

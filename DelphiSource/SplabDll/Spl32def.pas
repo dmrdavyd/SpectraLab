@@ -2,7 +2,7 @@
 unit Spl32def;
 
 interface
-uses matrix,optidef,math;
+uses mdefine,optidef,math;
 Const MaxCur=132;
       MinCur=-10;
       MaxPoints=16384;

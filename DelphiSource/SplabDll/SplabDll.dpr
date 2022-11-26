@@ -19,6 +19,8 @@ uses
   Spl32init in 'Spl32init.pas',
   Spn_sdec in 'Spn_sdec.pas',
   SplabMessages in 'SplabMessages.pas',
+  optidef in '..\Curfit&Optifun\optidef.pas',
+  link2opti in '..\Curfit&Optifun\link2opti.pas',
   WinTypes,
   WinProcs,
   Win32crt,

@@ -4,7 +4,7 @@
 unit SPL32BASE;
 
 interface
-uses spl32def,IniFiles, rdtsc, Matrix, Math;
+uses spl32def,IniFiles, rdtsc, mdefine, Math;
 
 
 var Spectra: ArrayOfDir;

@@ -1,7 +1,7 @@
 unit optima;
 
 interface
-uses matrix, spl32def,Link2opti,link2splab,curfit_def,optidef,math,WinTypes,WinProcs,Win32crt;
+uses mdefine,matrix,spl32def,Link2opti,link2splab,curfit_def,optidef,math,WinTypes,WinProcs,Win32crt;
 
 const
         ttab:array[1..20] of integer=(1270,430,318,278,257,245,237,231,226,223,

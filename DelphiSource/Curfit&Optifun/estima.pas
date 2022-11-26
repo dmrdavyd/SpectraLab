@@ -1,6 +1,6 @@
 unit estima;
 interface
-USES spl32def,link2opti,link2splab,optidef,curfit_def,matrix,optima,spl32str,
+USES spl32def,link2opti,link2splab,optidef,curfit_def,mdefine,matrix,optima,spl32str,
      Math,WinTypes,WinProcs,Win32crt;
 Procedure Calc_Est(nobj:integer;var psi:partype;var ok:boolean);
 function build_curve(lim,off:extended; npts,n:integer; var phi,fnd:partype):boolean;

@@ -1,6 +1,6 @@
 unit curfit_def;
 interface
-uses Spl32def,Link2opti,Link2splab,optidef, Matrix,Math;
+uses Spl32def,Link2opti,Link2splab,optidef,mdefine,Math;
 
 type opti_prm = record
      nitmax:longint;

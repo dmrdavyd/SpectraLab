@@ -1,6 +1,7 @@
 unit Spn_Sdec;
 interface
-uses Matrix,
+uses Mdefine,
+     matrix,
      SPL32BASE,
      Spl32def,
      SPL32STR,

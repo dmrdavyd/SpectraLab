@@ -10,7 +10,7 @@ uses Spl32def,
      OOIHSD,
      Link2opti,
      optidef,
-     matrix,
+     mdefine,
      Math;
 
 function _dsave(nm:longint; var dfname:string ):longint; export; stdcall;

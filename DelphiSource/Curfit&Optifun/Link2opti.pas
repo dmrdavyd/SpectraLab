@@ -1,6 +1,6 @@
 unit Link2opti;
 interface
-uses spl32def,optidef,matrix,math;
+uses spl32def,optidef,mdefine,math;
 function fun(var psi,fnd:partype; x,z,u:extended;der:boolean;
               mode,submode:integer):boolean;
 function setmode(refresh:longint):longint; stdcall;

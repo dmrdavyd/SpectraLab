@@ -1,10 +1,14 @@
 library Optifun;
 
 uses
-  splsolve in 'splsolve.pas',
+  splsolve,
   cfit2fun,
   math,
-  CubicRoot in 'E:\delphi-SRC\optifun\CubicRoot.pas';
+  spl32def in '..\SplabDll\spl32def.pas',
+  spl32str in '..\SplabDll\spl32str.pas',
+  mdefine in '..\SplabDll\mdefine.pas',
+  optidef,
+  CubicRoot;
 
 {$I-}
 {$R-}

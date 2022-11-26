@@ -3,7 +3,7 @@ unit SPL32_01;
 
 interface
 
-uses SPL32DEF,SPL32BASE,GRKERN32, Link2opti,matrix,optidef,SPL32STR,math;
+uses SPL32DEF,SPL32BASE,GRKERN32, Link2opti,mdefine,optidef,SPL32STR,math;
 
 const alphasize=1;
       measuring=false; (*!!*)

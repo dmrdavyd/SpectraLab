@@ -2,15 +2,20 @@
 library curfit;
 
 uses
-  spl32def,
+  spl32def in '..\SplabDll\Spl32def.pas',
   curfit_def,
   curfit_ini,
   optima,
   estima,
   optidef,
   Link2splab,
-  Link2opti in 'Link2opti.pas',
-  WinTypes,WinProcs,Win32crt;
+  Link2opti,
+  WinTypes,
+  WinProcs,
+  Win32crt,
+  mdefine in '..\SplabDll\mdefine.pas',
+  matrix in '..\SplabDll\matrix.pas';
+
 var WCRTSTR: string;
 
 function _build( npts,locn:longint; var lim,off :extended; fitprm:rfitrecord):longint; export; stdcall;

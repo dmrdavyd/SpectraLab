@@ -10,7 +10,8 @@ uses
   WINPROCS,
   SysUtils,
   Win32crt,
-  Matrix,
+  Matrix in '..\SplabDll\matrix.pas',
+  mdefine in '..\SplabDll\mdefine.pas'
   SpanDef,
   SpanLib,
   Spanio,

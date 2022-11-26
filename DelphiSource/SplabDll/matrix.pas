@@ -1,13 +1,7 @@
 {$N-}
 unit matrix;
 interface
-
-const omikron=1e-12;
-      maxp=20;
-
-  type mtype=array[0..maxp,1..maxp+1] of extended;
-  type partype=array[0..maxp] of extended;
-
+uses mdefine;
 procedure gauss(var a:mtype;u:integer;var x:partype;var e:boolean);
 procedure invert(var a:mtype;n:integer;var e:boolean);
 procedure multimat(var a,b,c:mtype;m,n,p:integer);
